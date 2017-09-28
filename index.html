@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en_us">
+<head> <meta charset="utf-8">
+	<title>Rock,Paper,Scissors</title>
+</head> 
+<script src="https://code.jquery.com/jquery-3.2.1.js"
+		integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+	    crossorigin="anonymous"></script>
+
+<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+
+<body>
+   
+          	<h1>Rock-Paper-Scissors</h1>
+     <div id= "submitNane">
+     	<label for ="yourName"><h2>Enter Your Name:</h2></label>
+     	<input type="text" id="yourName" name = "yourName"/>&nbsp;&nbsp;
+     	<button onclick ="submitName()">Submit Name</button>
+     </div>	
+
+     <div id ="p1name">
+     	<p id ="myTitle">Player 1</p>
+     	<input type="image" src="https://i.pinimg.com/736x/92/6d/b9/926db98b992b85931a4e7462fbc2e5e9--fractal-patterns-azurite-malachite.jpg" alt="Submit" name="p1name" value="value1"  height ="130" width ="170">
+     	
+     	<p id="p1name">&nbsp;</p>
+     </div>	
+
+     <div id= "submitNane">
+     	<label for ="yourName"><h2>Enter Your Name:</h2></label>
+     	<input type="text" id="yourName" name = "yourName"/>&nbsp;&nbsp;
+     	<button onclick ="submitName()">Submit Name</button>
+     </div>	
+
+     <div id ="p2name">
+     	<p id ="myTitle">Player 2</p>
+     	<input type="image" src="http://www.thesamplerguild.co.uk/images/KDAcornScissors3.jpg" alt="Submit" name="p2name" value="value2"  height ="130" width ="170">
+     	<p id="p2name">&nbsp;</p>
+     </div>	
+
+     <div id ="choosebuttons">
+     	<h2>Choose: Rock, Paper or Scissors...</h2>
+     	<button onclick ="chooseRock()" id ="rock_btn">ROCK</button>
+     	<button onclick ="choosePaper()" id ="paper_btn">PAPER</button>
+     	<button onclick ="chooseScissors()" id ="scissors_btn">SCISSORS</button>
+
+     	<div id="resutls">
+     	<p id="winner">&nbsp;</p>
+     	<p id="p1Points">&nbsp;</p>
+     	<p id="p2Points">&nbsp;</p>
+     	<button id = "resetbutton" onclick="resetPics()">Reset</button>
+
+<script type="text/javascript">
+
+Document.getElementbyId(p1Name, p2Name);
+
+findWinner('p1Name', or 'p2Name');
+    
+ 
+ var findWinner = function(p1name, value1, p2name, value2) {
+
+ 	var p1name = Player1 
+ 	
+
+ 	var p2name = Player2
+ 	
+
+ 	var sumValues = value1 + value2;
+ 	console.log("sumValues:" + sumValues);
+ 
+ if (sumValues === -1) // rock and scissors
+
+     {
+        if (value1 > value2) 
+        {
+            return (p2Name + " wins! Rock beats Scissors.");
+        }
+        else 
+        {
+            return(p1Name + " wins! Rock beats Scissors.");
+        }
+    }
+    else if (sumValues === 0)  
+    {
+        if (value1 > value2) 
+        { // 
+            return (p1Name + " wins! Paper covers Rock.");
+        }
+        else 
+        {
+            return (p2Name + " wins! Paper covers Rock.");
+        }
+    }
+    else if (sumValues === 1)
+    {
+        if (value1 > value2)
+        { 
+            return (p2Name + " wins! Scissors cuts Paper.");
+        }
+        else 
+        {
+            return(p1Name + " wins! Scissors cuts Paper.");
+        }
+    }
+   
+    
+};
+
+
+</script>
+
+</body>
+</html>

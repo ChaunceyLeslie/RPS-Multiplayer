@@ -15,7 +15,7 @@
      <div id= "submitNane">
      	<label for ="yourName"><h2>Enter Your Name:</h2></label>
      	<input type="text" id="yourName" name = "yourName"/>&nbsp;&nbsp;
-     	<button onclick ="submitName()">Submit Name</button>
+     	<button id="p1NameSubmit"></button>
      </div>	
 
      <div id ="p1name">
@@ -28,7 +28,7 @@
      <div id= "submitNane">
      	<label for ="yourName"><h2>Enter Your Name:</h2></label>
      	<input type="text" id="yourName" name = "yourName"/>&nbsp;&nbsp;
-     	<button onclick ="submitName()">Submit Name</button>
+     	<button onclick ="submitNamep2()">Submit Name</button>
      </div>	
 
      <div id ="p2name">
@@ -51,8 +51,36 @@
 
 <script type="text/javascript">
 
+//* Document.getElementbyId("p1Name");
+$( document ).ready(function() {
+	var Player1 = {choice:"", name:"", points: 0};
+	var Player2 = {choice:"", name:"", points: 0};
+	 $('#p1NameSubmit').on("click", function(){
+	 // function submitNamep1() {
+	 	document.getElementbyId("yourName").innerHTML 
+	 	console.log(document.getElementbyId("yourName").innerHTML)
+
+	 });
 
 
+	 var currentplayer = Player1
+
+  //   var currentplayer = Player2
+
+  //* player 1 pick on image for outcome. 
+  //* player 1 have option of rock, paper, scissors
+  //* display player 1 pick
+  //* player 2 pick image for outcome
+  //* display player 2 option for outcome 
+  //* compare player 2 to player 1 outcome and pick a winner
+  //* reset game after outcomeD
+  
+})
+
+
+
+
+//* findWinner('p1Name', or 'p2Name');
     
  
  var findWinner = function(p1name, value1, p2name, value2) {
